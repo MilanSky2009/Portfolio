@@ -1,0 +1,118 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #78ecec, #eccef1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  color: #000000;
+}
+
+.container ul{
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 20px;
+  max-width: 700px;
+  width: 100%;
+  padding: 50px 40px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.container:hover {
+  transform: scale(1.02);
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+p {
+  font-weight: 300;
+  font-size: 1.3rem;
+  margin-bottom: 40px;
+  color: #000000;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+li {
+  transition: transform 0.25s ease;
+}
+
+li:hover {
+  transform: translateY(-6px);
+}
+
+a {
+  display: inline-block;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding: 14px 32px;
+  border-radius: 50px;
+  box-shadow: 0 8px 15px rgba(255, 118, 140, 0.3);
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+  letter-spacing: 0.05em;
+  user-select: none;
+  cursor: pointer;
+}
+
+a:hover {
+  background: linear-gradient(135deg, #ff5f7e, #ff63a5);
+  box-shadow: 0 15px 25px rgba(255, 99, 165, 0.5);
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 40px 25px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+
+  ul {
+    gap: 20px;
+  }
+
+  a {
+    font-size: 1rem;
+    padding: 12px 26px;
+  }
+}

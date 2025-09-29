@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>🏆 Player Leaderboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🏆 Player Leaderboard</h1>
+    <table id="leaderboard">
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Avatar</th>
+          <th data-column="firstName" class="sortable">First Name</th>
+          <th data-column="lastName" class="sortable">Last Name</th>
+          <th data-column="score" class="sortable">Score</th>
+          <th data-column="level" class="sortable">Level</th>
+          <th data-column="joinDate" class="sortable">Join Date</th>
+          <th data-column="country" class="sortable">Country</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <div class="pagination">
+      <button id="prevBtn">Previous</button>
+      <span id="pageInfo"></span>
+      <button id="nextBtn">Next</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
