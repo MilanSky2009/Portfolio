@@ -1,0 +1,67 @@
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: #ffe6f0;
+  color: #5c005c;
+  padding: 20px;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #d63384;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input, select, button {
+  padding: 10px;
+  border: 2px solid #ff99cc;
+  border-radius: 8px;
+  background-color: #fff0f5;
+  color: #5c005c;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input:focus, select:focus, button:focus {
+  outline: 3px solid #ff99cc;
+  outline-offset: 2px;
+}
+
+#product-list div, #cart div {
+  background: #fff;
+  border: 2px dashed #ff99cc;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 2px 6px rgba(214, 51, 132, 0.2);
+}
+
+img {
+  width: 100px;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+button:hover {
+  background-color: #ffccf2;
+}
+
+#pagination {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#prev:disabled,
+#next:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

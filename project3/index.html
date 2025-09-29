@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Broken Calculator Starter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .calculator {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .display {
+      width: 100%;
+      height: 40px;
+      margin-bottom: 10px;
+      text-align: right;
+      padding: 5px;
+      font-size: 1.2rem;
+    }
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 60px);
+      gap: 10px;
+    }
+    button {
+      padding: 15px;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+      border: none;
+      background: #ddd;
+    }
+    button:hover {
+      background: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <input type="text" id="display" class="display" disabled>
+    <div class="buttons">
+      <button>7</button>
+      <button>8</button>
+      <button>9</button>
+      <button>/</button>
+      <button>4</button>
+      <button>5</button>
+      <button>6</button>
+      <button>*</button>
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
+      <button>-</button>
+      <button>0</button>
+      <button>.</button>
+      <button>=</button>
+      <button>+</button>
+      <button id="clear">C</button>
+      <button id="square">x²</button>
+
+    </div>
+
+  </div>
+
+  <script>
+  const display = document.getElementById('display');
+  const buttons = document.querySelectorAll('button');
+  const clearButton = document.getElementById('clear');
+  const squareButton = document.getElementById('square');
+  let currentInput = "";
+
+  buttons.forEach(button => {
+    if (button.id === 'clear' || button.id === 'square') return;
+    button.addEventListener('click', () => {
+      const value = button.textContent;
+      if (value === '=') {
+        try {
+          currentInput = eval(currentInput).toString();
+          display.value = currentInput;
+        } catch {
+          display.value = "Error";
+          currentInput = "";
+        }
+      } else {
+        currentInput += value;
+        display.value = currentInput;
+      }
+    });
+  });
+
+  clearButton.addEventListener('click', () => {
+    currentInput = "";
+    display.value = "";
+  });
+
+  squareButton.addEventListener('click', () => {
+    try {
+      if (currentInput.trim() === "") {
+        display.value = "Error";
+        return;
+      }
+      let num = eval(currentInput);
+      if (typeof num !== "number" || isNaN(num)) {
+        display.value = "Error";
+        currentInput = "";
+        return;
+      }
+      let squared = num * num;
+      currentInput = squared.toString();
+      display.value = currentInput;
+    } catch {
+      display.value = "Error";
+      currentInput = "";
+    }
+  });
+</script>
+</body>
+</html>

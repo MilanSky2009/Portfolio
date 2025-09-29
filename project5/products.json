@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Floral Dress",
+    "price": 49.99,
+    "description": "A beautiful floral dress perfect for spring or summer.",
+    "image": "dress.png"
+  },
+  {
+    "id": 2,
+    "name": "Fluffy Slippers",
+    "price": 19.99,
+    "description": "Soft, cozy slippers to keep your feet warm and stylish.",
+    "image": "image.png"
+  },
+  {
+    "id": 3,
+    "name": "Sparkly Earrings",
+    "price": 9.99,
+    "description": "Shiny earrings that add a touch of sparkle to any outfit.",
+    "image": "image copy.png"
+  },
+  {
+    "id": 4,
+    "name": "Pink Handbag",
+    "price": 49.99,
+    "description": "A chic pink handbag to complement your stylish look.",
+    "image": "image copy 2.png"
+  }
+]

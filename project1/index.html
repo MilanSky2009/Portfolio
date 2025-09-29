@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Travel Galleries</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1> Photography Galleries</h1>
+  </header>
+
+  <!-- Gallery 1: Carousel -->
+  <section class="gallery-carousel">
+    <h2>Gallery 1: Carousel</h2>
+    <div class="carousel-container">
+      <button class="carousel-btn prev">&#10094;</button>
+      <div class="carousel-track">
+        <!-- Images inserted here -->
+        <img src="image.png" alt="Travel 1" class="carousel-image" />
+        <img src="./image copy.png" alt="Travel 2" class="carousel-image" />
+        <img src="./image copy 4.png" alt="Travel 3" class="carousel-image" />
+        <img src="./image copy 3.png" alt="Travel 4" class="carousel-image" />
+        <img src="./image copy 2.png" alt="Travel 5" class="carousel-image" />
+        <img src="./image copy 5.png" alt="Travel 6" class="carousel-image" />
+        <img src="image copy 6.png" alt="Travel 7" class="carousel-image" />
+        <img src="./image copy.png" alt="Travel 8" class="carousel-image" />
+      </div>
+      <button class="carousel-btn next">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- Gallery 2: Masonry Grid -->
+  <section class="gallery-grid">
+    <h2>Gallery 2: Masonry Grid</h2>
+    <div class="masonry-grid">
+      <img src="./image copy 7.png" alt="Travel Grid 1" />
+      <img src="./image copy 8.png" alt="Travel Grid 2" />
+      <img src="./image copy 9.png" alt="Travel Grid 3" />
+      <img src="./image copy 10.png" alt="Travel Grid 4" />
+      <img src="./image copy 11.png" alt="Travel Grid 5" />
+      <img src="./image copy 12.png" alt="Travel Grid 6" />
+      <img src="./image copy 13.png" alt="Travel Grid 7" />
+      <img src="./image copy 14.png" alt="Travel Grid 8" />
+    </div>
+  </section>
+
+  <!-- Lightbox modal -->
+  <div class="lightbox" id="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-img" src="" alt="Enlarged Image" />
+    <p></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
